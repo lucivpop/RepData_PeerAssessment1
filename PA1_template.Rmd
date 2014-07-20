@@ -3,7 +3,7 @@
 
 ## Loading and preprocessing the data
 ```{r }
-#read table, process date column, sum total steps per day
+#read table "activity.csv", process date column, sum total steps per day
 data<-read.csv("activity.csv",header=T,colClasses=c("numeric","character","numeric"))
 data$date<-as.Date(data$date,format="%Y-%m-%d",tz="")
 data<-data[order(data$date, data$interval),]
